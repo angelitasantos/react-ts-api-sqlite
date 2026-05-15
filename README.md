@@ -40,6 +40,30 @@ Este projeto é uma aplicação full stack organizada em arquitetura **MVC (Cont
 
 ---
 
+## Tecnologias utilizadas
+
+### Backend
+
+- Node.js v18
+- TypeScript
+- Express
+- SQLite3
+- JWT (`jsonwebtoken`)
+- Hash de senha (`bcrypt`)
+- Variáveis de ambiente (`dotenv`)
+- Testes com Jest + Supertest
+
+### Frontend
+
+- React
+- TypeScript
+- Vite
+- React Router DOM
+- Axios
+- Jest / Testing Library
+
+---
+
 ## Licença
 
 Este projeto está licenciado sob a licença [MIT](./LICENSE).
