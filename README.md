@@ -118,6 +118,31 @@ npm run dev
 ---
 
 
+## Objetivo funcional
+
+O módulo `web-home` será composto por 3 páginas:
+
+- `Home`
+- `About`
+- `Contact`
+
+Cada página terá sua própria organização em MVC no backend.
+
+No banco de dados existirão as tabelas:
+
+- `home`
+- `about`
+- `contact`
+
+Essas tabelas armazenam os conteúdos que serão exibidos no frontend. A regra principal é:
+
+- quando um novo registro for criado como ativo nas tabelas `home` e `about`, os registros anteriores daquela tabela devem ser desativados
+- cada tabela terá operações de **CRUD**
+- apenas um registro pode estar ativo por vez nas tabelas `home` e `about`
+- tabela `contact` serão armazenados os contatos efetuados pelo formulario da pagina
+
+---
+
 ## Licença
 
 Este projeto está licenciado sob a licença [MIT](./LICENSE).
