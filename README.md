@@ -82,6 +82,42 @@ git --version
 
 ---
 
+## Como rodar o frontend
+
+### 1. Criar o projeto com Vite
+
+```bash
+npm create vite@5 frontend -- --template react-ts
+```
+
+### 2. Entrar na pasta do frontend
+
+```bash
+cd frontend
+npm install
+```
+
+### 3. Instalar dependências
+
+```bash
+npm install react-router-dom axios
+```
+
+### 4. Instalar dependências de desenvolvimento
+
+```bash
+npm install -D jest ts-jest @types/jest @testing-library/react @testing-library/jest-dom @testing-library/user-event jsdom
+```
+
+### 5. Rodar em desenvolvimento
+
+```bash
+npm run dev
+```
+
+---
+
+
 ## Licença
 
 Este projeto está licenciado sob a licença [MIT](./LICENSE).
