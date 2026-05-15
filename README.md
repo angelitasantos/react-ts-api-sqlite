@@ -64,6 +64,24 @@ Este projeto é uma aplicação full stack organizada em arquitetura **MVC (Cont
 
 ---
 
+## Pré-requisitos
+
+Antes de começar, instale:
+
+- **Node.js v18**
+- **npm**
+- **Git**
+
+### Verificar versões
+
+```bash
+node -v
+npm -v
+git --version
+```
+
+---
+
 ## Licença
 
 Este projeto está licenciado sob a licença [MIT](./LICENSE).
