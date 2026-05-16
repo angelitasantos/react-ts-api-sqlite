@@ -1,5 +1,5 @@
-import type { HomeHighlightItem } from '../../../types/home';
-import { Container } from '../../../components/Container';
+import type { HomeHighlightItem } from '../../../../types/home';
+import { Container } from '../../../../components/Container';
 import './HomeHighlights.css';
 
 interface HomeHighlightsProps {
