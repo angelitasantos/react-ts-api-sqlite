@@ -1,37 +1,52 @@
-import { HomeBanner } from '../../components/HomeBanner';
+import { Header } from '../../../../components/Header';
+import { Footer } from '../../../../components/Footer';
 import { useHome } from '../../../../hooks/useHome';
+import { HomeBanner } from '../../components/HomeBanner/HomeBanner';
+import { HomeHighlights } from '../../components/HomeHighlights/HomeHighlights';
+import { HomeAbout } from '../../components/HomeAbout/HomeAbout';
 import './home.css';
 
 export default function Home() {
   const { home, loading, error } = useHome();
 
-  if (loading) {
-    return (
-      <main className='home-page'>
-        <div className='home-page__status'>Carregando conteúdo...</div>
-      </main>
-    );
-  }
-
-  if (error) {
-    return (
-      <main className='home-page'>
-        <div className='home-page__status home-page__status--error'>{error}</div>
-      </main>
-    );
-  }
-
-  if (!home) {
-    return (
-      <main className='home-page'>
-        <div className='home-page__status'>Nenhum conteúdo disponível.</div>
-      </main>
-    );
-  }
-
   return (
-    <main className='home-page'>
-      <HomeBanner content={home} />
-    </main>
+    <div className='home-page'>
+      <Header />
+
+      <main className='home-page__main'>
+        {loading && (
+          <section className='home-page__status-wrapper'>
+            <div className='home-page__status'>Carregando conteúdo...</div>
+          </section>
+        )}
+
+        {!loading && error && (
+          <section className='home-page__status-wrapper'>
+            <div className='home-page__status home-page__status--error'>
+              {error}
+            </div>
+          </section>
+        )}
+
+        {!loading && !error && home && (
+          <>
+            <HomeBanner content={home} />
+            <HomeHighlights items={home.highlights} />
+            <HomeAbout
+              title={home.aboutTitle}
+              description={home.aboutDescription}
+            />
+          </>
+        )}
+
+        {!loading && !error && !home && (
+          <section className='home-page__status-wrapper'>
+            <div className='home-page__status'>Nenhum conteúdo disponível.</div>
+          </section>
+        )}
+      </main>
+
+      <Footer />
+    </div>
   );
 }
