@@ -10,7 +10,7 @@ interface UseHomeReturn {
 
 export function useHome(): UseHomeReturn {
   const [home, setHome] = useState<HomeContent | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
