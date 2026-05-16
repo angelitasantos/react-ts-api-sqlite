@@ -31,10 +31,16 @@ export default function Home() {
         {!loading && !error && home && (
           <>
             <HomeBanner content={home} />
-            <HomeHighlights items={home.highlights} />
+            <HomeHighlights
+              title={home.highlightsTitle}
+              description={home.highlightsDescription}
+              items={home.highlights}
+            />
             <HomeAbout
               title={home.aboutTitle}
               description={home.aboutDescription}
+              cardTitle={home.aboutCardTitle}
+              cardDescription={home.aboutCardDescription}
             />
           </>
         )}

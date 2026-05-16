@@ -4,9 +4,11 @@ import './HomeAbout.css';
 interface HomeAboutProps {
   title: string;
   description: string;
+  cardTitle: string;
+  cardDescription: string;
 }
 
-export function HomeAbout({ title, description }: HomeAboutProps) {
+export function HomeAbout({ title, description, cardTitle, cardDescription }: HomeAboutProps) {
   return (
     <section className='home-about-section'>
       <Container>
@@ -18,12 +20,8 @@ export function HomeAbout({ title, description }: HomeAboutProps) {
           </div>
 
           <div className='home-about__card'>
-            <h3 className='home-about__card-title'>Pronto para o próximo passo</h3>
-            <p className='home-about__card-text'>
-              Quando o backend estiver disponível, basta substituir o mock no
-              service por uma chamada HTTP. A interface e a tipagem já estarão
-              preparadas.
-            </p>
+            <h3 className='home-about__card-title'>{cardTitle}</h3>
+            <p className='home-about__card-text'>{cardDescription}</p>
           </div>
         </div>
       </Container>

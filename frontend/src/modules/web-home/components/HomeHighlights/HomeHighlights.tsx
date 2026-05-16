@@ -3,22 +3,19 @@ import { Container } from '../../../../components/Container';
 import './HomeHighlights.css';
 
 interface HomeHighlightsProps {
+  title: string;
+  description: string;
   items: HomeHighlightItem[];
 }
 
-export function HomeHighlights({ items }: HomeHighlightsProps) {
+export function HomeHighlights({ title, description, items }: HomeHighlightsProps) {
   return (
     <section className='home-highlights-section'>
       <Container>
         <div className='home-section-heading'>
           <span className='home-section-heading__eyebrow'>Destaques</span>
-          <h2 className='home-section-heading__title'>
-            Uma base sólida para evoluir o projeto
-          </h2>
-          <p className='home-section-heading__description'>
-            Componentes organizados, fácil manutenção e estrutura pronta para
-            crescer com novas funcionalidades.
-          </p>
+          <h2 className='home-section-heading__title'>{title}</h2>
+          <p className='home-section-heading__description'>{description}</p>
         </div>
 
         <div className='home-highlights'>

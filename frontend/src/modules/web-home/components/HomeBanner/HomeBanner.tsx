@@ -17,8 +17,8 @@ export function HomeBanner({ content }: HomeBannerProps) {
             <p className='home-banner__description'>{content.description}</p>
 
             <div className='home-banner__actions'>
-              <a className='home-banner__button home-banner__button--primary' href={content.buttonLink}>
-                {content.buttonText}
+              <a className='home-banner__button home-banner__button--primary' href={content.primaryButtonLink}>
+                {content.primaryButtonText}
               </a>
 
               {content.secondaryButtonText && content.secondaryButtonLink && (
